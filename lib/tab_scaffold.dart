@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tat_flutter/screen/calendar_page.dart';
+import 'package:tat_flutter/screen/credit_page.dart';
 import 'package:tat_flutter/screen/curriculum_page.dart';
+import 'package:tat_flutter/screen/etc_page.dart';
 
 class TabScaffold extends StatefulWidget {
   @override
@@ -11,9 +14,9 @@ class _TabScaffoldState extends State<TabScaffold> {
   int _selectedIndex = 0;
   final pages = [
     CurriculumPage(),
-    CurriculumPage(),
-    CurriculumPage(),
-    CurriculumPage()
+    CalendarPage(),
+    CreditPage(),
+    EtcPage()
   ];
 
   @override

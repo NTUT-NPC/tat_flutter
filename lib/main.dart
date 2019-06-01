@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tat_flutter/tab_scaffold.dart';
+import 'package:tat_flutter/screen/login_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TabScaffold(),
+      home: LoginPage(),
     );
   }
 }

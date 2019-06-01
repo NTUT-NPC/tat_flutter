@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../tab_scaffold.dart';
+
 class LoginForm extends StatefulWidget {
   @override
   _LoginFormState createState() => _LoginFormState();
@@ -159,6 +161,10 @@ class _LoginFormState extends State<LoginForm> {
                 .showSnackBar(SnackBar(content: Text("密碼請勿留空")));
           } else {
             Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => TabScaffold()),
+            );
           }
         }
       },

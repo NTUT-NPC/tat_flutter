@@ -174,4 +174,11 @@ class _LoginFormState extends State<LoginForm> {
     }
     return true;
   }
+
+   void navigateRouteWithReplacement(Widget newPage) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => newPage),
+    );
+  }
 }

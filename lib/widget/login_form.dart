@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tat_flutter/utils/constant.dart';
 
 import '../tab_scaffold.dart';
 
@@ -124,11 +125,11 @@ class _LoginFormState extends State<LoginForm> {
   Widget buildLoginButton() {
     return RaisedButton(
       padding: EdgeInsets.all(0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+      shape: RoundedRectangleBorder(borderRadius: kBorderRadius),
       child: Container(
         padding: EdgeInsets.only(left: 40, right: 40, top: 12, bottom: 12),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(5)),
+            borderRadius: kBorderRadius,
             gradient: LinearGradient(
               colors: [Colors.deepOrange, Colors.orange],
               stops: [0.0, 1.0],
@@ -137,7 +138,7 @@ class _LoginFormState extends State<LoginForm> {
             )),
         child: Text(
           "登入",
-          style: TextStyle(fontSize: 20, color: Colors.white),
+          style: TextStyle(fontSize: kLargeFontSize, color: Colors.white),
         ),
       ),
       onPressed: () => submit(),

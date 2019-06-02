@@ -12,12 +12,7 @@ class TabScaffold extends StatefulWidget {
 class _TabScaffoldState extends State<TabScaffold> {
   final _bottomNavigationColor = Colors.blueGrey;
   int _selectedIndex = 0;
-  final pages = [
-    CurriculumPage(),
-    CalendarPage(),
-    CreditPage(),
-    EtcPage()
-  ];
+  final pages = [CurriculumPage(), CalendarPage(), CreditPage(), EtcPage()];
 
   @override
   Widget build(BuildContext context) {

@@ -166,4 +166,12 @@ class _LoginFormState extends State<LoginForm> {
       }
     }
   }
+
+  bool verifyInput(account, password) {
+    if (_account.isEmpty || _password.isEmpty) {
+      Scaffold.of(context).showSnackBar(SnackBar(content: Text('帳號密碼請勿留空')));
+      return false;
+    }
+    return true;
+  }
 }

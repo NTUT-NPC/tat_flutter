@@ -50,12 +50,6 @@ class _LoginFormState extends State<LoginForm> {
     );
   }
 
-  void showPassword() {
-    setState(() {
-      isShowPassword = !isShowPassword;
-    });
-  }
-
   Widget buildLoginTextForm() {
     return Container(
       decoration: BoxDecoration(
@@ -88,9 +82,7 @@ class _LoginFormState extends State<LoginForm> {
                       hintText: "帳號",
                       border: InputBorder.none),
                   style: TextStyle(fontSize: 16, color: Colors.black),
-                  onSaved: (value) {
-                    _account = value;
-                  },
+                  onSaved: (value) => _account = value,
                 ),
               ),
             ),
@@ -119,9 +111,7 @@ class _LoginFormState extends State<LoginForm> {
                           onPressed: showPassword)),
                   obscureText: !isShowPassword,
                   style: TextStyle(fontSize: 16, color: Colors.black),
-                  onSaved: (value) {
-                    _password = value;
-                  },
+                  onSaved: (value) => _password = value,
                 ),
               ),
             ),
@@ -150,24 +140,30 @@ class _LoginFormState extends State<LoginForm> {
           style: TextStyle(fontSize: 20, color: Colors.white),
         ),
       ),
-      onPressed: () {
-        if (_loginFormKey.currentState.validate()) {
-          _loginFormKey.currentState.save();
-          if (_account.isEmpty) {
-            Scaffold.of(context)
-                .showSnackBar(SnackBar(content: Text('帳號請勿留空')));
-          } else if (_password.isEmpty) {
-            Scaffold.of(context)
-                .showSnackBar(SnackBar(content: Text("密碼請勿留空")));
-          } else {
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => TabScaffold()),
-            );
-          }
-        }
-      },
+      onPressed: () => submit(),
     );
+  }
+
+  void showPassword() {
+    setState(() {
+      isShowPassword = !isShowPassword;
+    });
+  }
+
+  void submit() {
+    if (_loginFormKey.currentState.validate()) {
+      _loginFormKey.currentState.save();
+      if (_account.isEmpty) {
+        Scaffold.of(context).showSnackBar(SnackBar(content: Text('帳號請勿留空')));
+      } else if (_password.isEmpty) {
+        Scaffold.of(context).showSnackBar(SnackBar(content: Text("密碼請勿留空")));
+      } else {
+        Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => TabScaffold()),
+        );
+      }
+    }
   }
 }

@@ -151,19 +151,10 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   void submit() {
-    if (_loginFormKey.currentState.validate()) {
-      _loginFormKey.currentState.save();
-      if (_account.isEmpty) {
-        Scaffold.of(context).showSnackBar(SnackBar(content: Text('帳號請勿留空')));
-      } else if (_password.isEmpty) {
-        Scaffold.of(context).showSnackBar(SnackBar(content: Text("密碼請勿留空")));
-      } else {
-        Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => TabScaffold()),
-        );
-      }
+    _loginFormKey.currentState.save();
+    if (verifyInput(_account, _password)) {
+      Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
+      navigateRouteWithReplacement(TabScaffold());
     }
   }
 

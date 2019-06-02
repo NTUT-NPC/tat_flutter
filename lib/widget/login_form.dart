@@ -124,11 +124,11 @@ class _LoginFormState extends State<LoginForm> {
   Widget buildLoginButton() {
     return RaisedButton(
       padding: EdgeInsets.all(0),
-      shape: RoundedRectangleBorder(borderRadius: kBorderRadius),
+      shape: RoundedRectangleBorder(borderRadius:Constants.borderRadius),
       child: Container(
         padding: EdgeInsets.only(left: 40, right: 40, top: 12, bottom: 12),
         decoration: BoxDecoration(
-            borderRadius: kBorderRadius,
+            borderRadius: Constants.borderRadius,
             gradient: LinearGradient(
               colors: [Colors.deepOrange, Colors.orange],
               stops: [0.0, 1.0],
@@ -137,7 +137,7 @@ class _LoginFormState extends State<LoginForm> {
             )),
         child: Text(
           "登入",
-          style: TextStyle(fontSize: kLargeFontSize, color: Colors.white),
+          style: TextStyle(fontSize: Constants.largeFontSize, color: Colors.white),
         ),
       ),
       onPressed: () => submit(),

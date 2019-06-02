@@ -1,8 +1,13 @@
 import 'package:flutter/painting.dart';
 
-const EdgeInsets kScreenPadding = EdgeInsets.all(32);
-const BorderRadius kBorderRadius = BorderRadius.all(Radius.circular(5));
+class Constants {
 
-const double kSmallFontSize = 14;
-const double kLargeFontSize = 20;
-const double kExtraLargeFontSize = 32;
+  /// layout
+  static const EdgeInsets screenPadding = EdgeInsets.all(32);
+  static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(5));
+
+  /// font
+  static const double smallFontSize = 14;
+  static const double largeFontSize = 20;
+  static const double extraLargeFontSize = 32;
+}

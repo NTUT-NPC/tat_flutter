@@ -8,9 +8,9 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          padding: kScreenPadding,
+          padding: Constants.screenPadding,
           decoration: new BoxDecoration(
-              borderRadius: kBorderRadius,
+              borderRadius: Constants.borderRadius,
               gradient: LinearGradient(
                 colors: const [Colors.blueAccent, Colors.blue],
                 stops: const [0.0, 1.0],
@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                       child: Text(
                         '北科入口',
                         style: TextStyle(
-                            fontSize: kExtraLargeFontSize,
+                            fontSize: Constants.extraLargeFontSize,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),

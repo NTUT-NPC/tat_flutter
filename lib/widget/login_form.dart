@@ -35,7 +35,6 @@ class _LoginFormState extends State<LoginForm> {
                 child: Text(
                   "忘記密碼?",
                   style: TextStyle(
-                      fontSize: 16,
                       color: Colors.white,
                       decoration: TextDecoration.underline),
                 ),
@@ -82,7 +81,7 @@ class _LoginFormState extends State<LoginForm> {
                       ),
                       hintText: "帳號",
                       border: InputBorder.none),
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  style: TextStyle(color: Colors.black),
                   onSaved: (value) => _account = value,
                 ),
               ),
@@ -111,7 +110,7 @@ class _LoginFormState extends State<LoginForm> {
                           ),
                           onPressed: showPassword)),
                   obscureText: !isShowPassword,
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  style: TextStyle(color: Colors.black),
                   onSaved: (value) => _password = value,
                 ),
               ),

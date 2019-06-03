@@ -156,6 +156,7 @@ class _LoginFormState extends State<LoginForm> {
     _loginFormKey.currentState.save();
     if (verifyInput(_account, _password)) {
       Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
+      // TODO: implement login action
       navigateRouteWithReplacement(TabScaffold());
     }
   }

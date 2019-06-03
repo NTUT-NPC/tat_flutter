@@ -105,7 +105,9 @@ class _LoginFormState extends State<LoginForm> {
                       border: InputBorder.none,
                       suffixIcon: IconButton(
                           icon: Icon(
-                            Icons.remove_red_eye,
+                            (isShowPassword)
+                                ? Icons.visibility
+                                : Icons.visibility_off,
                             color: Colors.black,
                           ),
                           onPressed: showPassword)),

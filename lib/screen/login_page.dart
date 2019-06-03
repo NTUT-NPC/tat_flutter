@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tat_flutter/utils/constant.dart';
 import 'package:tat_flutter/widget/login_form.dart';
 
 class LoginPage extends StatelessWidget {
@@ -7,9 +8,9 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          padding: EdgeInsets.all(32.0),
+          padding: Constants.of(context).screenPadding,
           decoration: new BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(5)),
+              borderRadius: Constants.of(context).borderRadius,
               gradient: LinearGradient(
                 colors: const [Colors.blueAccent, Colors.blue],
                 stops: const [0.0, 1.0],
@@ -37,7 +38,7 @@ class LoginPage extends StatelessWidget {
                       child: Text(
                         '北科入口',
                         style: TextStyle(
-                            fontSize: 32,
+                            fontSize: Constants.of(context).extraLargeFontSize,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),

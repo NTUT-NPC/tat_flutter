@@ -1,6 +1,6 @@
 # TAT - Flutter
 
-A new Flutter project.
+A new Flutter project for Taipei Tech's Student.
 
 ## Getting Started
 

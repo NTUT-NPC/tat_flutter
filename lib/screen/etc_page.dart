@@ -3,14 +3,14 @@ import 'package:tat_flutter/model/etc_item.dart';
 import 'package:tat_flutter/widget/rounded_icon.dart';
 
 class EtcPage extends StatelessWidget {
-  final List<EtcItem> etcItems = []..add(
-      EtcItem(Icons.school, Colors.deepOrange, '學分計算'))..add(
-      EtcItem(Icons.account_circle, Colors.blue, '帳號管理'))..add(
-      EtcItem(Icons.map, Colors.green, '校園地圖'))..add(
-      EtcItem(Icons.store, Colors.red, '特約商店'))..add(
-      EtcItem(Icons.feedback, Colors.purple, '意見回饋'))..add(
-      EtcItem(Icons.settings, Colors.orange, '設定'))..add(
-      EtcItem(Icons.info, Colors.blueGrey, '關於'));
+  final List<EtcItem> etcItems = []
+    ..add(EtcItem(Icons.school, Colors.deepOrange, '學分計算'))
+    ..add(EtcItem(Icons.account_circle, Colors.blue, '帳號管理'))
+    ..add(EtcItem(Icons.map, Colors.green, '校園地圖'))
+    ..add(EtcItem(Icons.store, Colors.red, '特約商店'))
+    ..add(EtcItem(Icons.feedback, Colors.purple, '意見回饋'))
+    ..add(EtcItem(Icons.settings, Colors.orange, '設定'))
+    ..add(EtcItem(Icons.info, Colors.blueGrey, '關於'));
 
   @override
   Widget build(BuildContext context) {

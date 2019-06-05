@@ -35,7 +35,7 @@ class _LoginFormState extends State<LoginForm> {
                 child: Text(
                   "忘記密碼?",
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Constants.of(context).lightFontColor,
                       decoration: TextDecoration.underline),
                 ),
               ),
@@ -137,7 +137,7 @@ class _LoginFormState extends State<LoginForm> {
             )),
         child: Text(
           "登入",
-          style: TextStyle(fontSize: Constants.of(context).largeFontSize, color: Colors.white),
+          style: TextStyle(fontSize: Constants.of(context).largeFontSize, color: Constants.of(context).lightFontColor),
         ),
       ),
       onPressed: () => submit(),

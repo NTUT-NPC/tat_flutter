@@ -1,5 +1,5 @@
-import 'package:flutter/painting.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class Constants extends InheritedWidget {
   static Constants of(BuildContext context) => context.inheritFromWidgetOfExactType(Constants);
@@ -14,6 +14,10 @@ class Constants extends InheritedWidget {
   final double smallFontSize = 14;
   final double largeFontSize = 20;
   final double extraLargeFontSize = 32;
+
+  /// font color
+  final Color darkFontColor = Colors.black87;
+  final Color lightFontColor = Colors.white;
 
   @override
   bool updateShouldNotify(InheritedWidget oldWidget) => false;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tat_flutter/model/etc_item.dart';
+import 'package:tat_flutter/utils/constant.dart';
 import 'package:tat_flutter/widget/rounded_icon.dart';
 
 class EtcPage extends StatelessWidget {
@@ -34,7 +35,7 @@ class EtcPage extends StatelessWidget {
                       color: etcItem.color,
                     ),
                     title: Text(etcItem.text,
-                        style: TextStyle(color: Colors.black87)),
+                        style: TextStyle(color: Constants.of(context).darkFontColor)),
                   ),
                   onTap: () => {},
                 );

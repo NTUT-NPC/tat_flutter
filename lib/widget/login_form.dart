@@ -105,7 +105,9 @@ class _LoginFormState extends State<LoginForm> {
                       border: InputBorder.none,
                       suffixIcon: IconButton(
                           icon: Icon(
-                            Icons.remove_red_eye,
+                            (isShowPassword)
+                                ? Icons.visibility
+                                : Icons.visibility_off,
                             color: Colors.black,
                           ),
                           onPressed: showPassword)),
@@ -151,19 +153,26 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   void submit() {
-    if (_loginFormKey.currentState.validate()) {
-      _loginFormKey.currentState.save();
-      if (_account.isEmpty) {
-        Scaffold.of(context).showSnackBar(SnackBar(content: Text('帳號請勿留空')));
-      } else if (_password.isEmpty) {
-        Scaffold.of(context).showSnackBar(SnackBar(content: Text("密碼請勿留空")));
-      } else {
-        Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => TabScaffold()),
-        );
-      }
+    _loginFormKey.currentState.save();
+    if (verifyInput(_account, _password)) {
+      Scaffold.of(context).showSnackBar(SnackBar(content: Text("登入中")));
+      // TODO(yaoandy107): Implement login action when there is a API
+      navigateRouteWithReplacement(TabScaffold());
     }
+  }
+
+  bool verifyInput(account, password) {
+    if (_account.isEmpty || _password.isEmpty) {
+      Scaffold.of(context).showSnackBar(SnackBar(content: Text('帳號密碼請勿留空')));
+      return false;
+    }
+    return true;
+  }
+
+  void navigateRouteWithReplacement(Widget newPage) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => newPage),
+    );
   }
 }

@@ -3,7 +3,6 @@ import 'package:tat_flutter/model/etc_item.dart';
 import 'package:tat_flutter/widget/rounded_icon.dart';
 
 class EtcPage extends StatelessWidget {
-
   final List<EtcItem> etcItems = []..add(
       EtcItem(Icons.school, Colors.deepOrange, '學分計算'))..add(
       EtcItem(Icons.account_circle, Colors.blue, '帳號管理'))..add(
@@ -34,8 +33,8 @@ class EtcPage extends StatelessWidget {
                       icon: etcItem.icon,
                       color: etcItem.color,
                     ),
-                    title: Text(
-                        etcItem.text, style: TextStyle(color: Colors.black87)),
+                    title: Text(etcItem.text,
+                        style: TextStyle(color: Colors.black87)),
                   ),
                   onTap: () => {},
                 );

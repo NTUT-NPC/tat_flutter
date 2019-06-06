@@ -2,15 +2,20 @@
 
 A new Flutter project for Taipei Tech's Student.
 
-## Getting Started
+## Contributing to the project
+### Issues
+Feel free to submit issues requests.
 
-This project is a starting point for a Flutter application.
+### Contributing
+We follow the GitHub flow, be free to contribute for this project.
+1.  **Fork** the repo on GitHub
+2.  **Clone** the project to your own machine
+3.  **Commit** changes to your own branch
+4.  **Push** your work back up to your fork
+5.  Submit a **Pull request** so that we can review your changes
 
-A few resources to get you started if this is your first Flutter project:
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Contributor
+- [Wei-Chen Yao](https://github.com/yaoandy107)
+- [jamfly](https://github.com/jamfly)
